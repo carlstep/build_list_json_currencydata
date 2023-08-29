@@ -25,10 +25,10 @@ class RatesModel {
   Map<String, double> rates;
 
   factory RatesModel.fromJson(Map<String, dynamic> json) => RatesModel(
-        disclaimer: json["disclaimer"],
-        license: json["license"],
-        timestamp: json["timestamp"],
-        base: json["base"],
+        disclaimer: json["disclaimer"] as String,
+        license: json["license"] as String,
+        timestamp: json["timestamp"] as int,
+        base: json["base"] as String,
         rates: Map.from(json["rates"])
             .map((k, v) => MapEntry<String, double>(k, v.toDouble())),
       );

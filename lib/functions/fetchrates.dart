@@ -12,7 +12,7 @@ Future<RatesModel> fetchrates() async {
 
 Future<Map> fetchcurrencies() async {
   var response = await http.get(
-      Uri.parse('https://openexchangerates.org/api/latest.json?app_id=' + key));
+      Uri.parse('https://openexchangerates.org/api/latest.json?app_id=$key'));
   final allCurrencies = allCurrenciesFromJson(response.body);
   return allCurrencies;
 }

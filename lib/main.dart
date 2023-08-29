@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=BVoyT49pOdU&t=64s
 */
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
